@@ -185,18 +185,6 @@ we got root
 we find the first flag by playing with the url.
 /flag gives us FLAG{n1c3_try_but_th4ts_n0t_h0w_th1s_w0rks}
 
-### 2
-if you follow the instruction in paco's encryption script and get all the key parts once you root, you'll find this in the decrypted rapport
-FLAG{x4v13r_w4s_3r4s3d_but_n0t_g0n3}
-
-### 3
-
-in sophie's .bash_history you'll find
-```
-curl http://127.0.0.1:9000/internal/telemetry
-```
-that gives us FLAG{b4sh_h1st0ry_1s_4_d14ry}
-
 ### escalation flags
 
 once we're root can find a flagd service with a find command
@@ -217,3 +205,31 @@ nc -U /run/flagd/USERNAME.sock
 ```
 and we get the those flags
 
+
+
+if you follow the instruction in paco's encryption script and get all the key parts once you root, you'll find this in the decrypted rapport
+```
+FLAG{x3v13r_w4s_3r4s3d_but_n0t_g0n3}
+```
+```
+
+this is the flag we got about de pdf PROJET_FORK_HAL9042.pdf when we use the code in the bash history of sophie and this pdf was in the root.
+```
+FLAG = m0ul1n3tt3_w4s_n3v3r_ju5t_4_scr1pt
+
+### BONUS
+
+we find the first flag by playing with the url.
+/flag gives us
+```
+FLAG{n1c3_try_but_th4ts_n0t_h0w_th1s_w0rks}
+```
+
+in sophie's .bash_history you'll find
+```
+curl http://127.0.0.1:9000/internal/telemetry
+```
+that gives us FLAG{b4sh_h1st0ry_1s_4_d14ry}
+
+```
+```
