@@ -204,6 +204,8 @@ and we get the those flags
 
 
 if you follow the instruction in paco's encryption script and get all the key parts once you root, you'll find this in the decrypted rapport
+bash-5.2# KEY=$(printf '%s%s%s%s' "M0ul1n3tt3" "847_4n0m4l13s" "S0ph13_J14" "uid1337" | sha256sum | cut -d' ' -f1)
+bash-5.2# openssl enc -d -aes-256-ecb -K "$KEY" -in rapport_final.enc -out rapport_final.txt
 ```
 FLAG{x3v13r_w4s_3r4s3d_but_n0t_g0n3}
 ```
