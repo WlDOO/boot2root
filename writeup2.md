@@ -226,10 +226,8 @@ FLAG{n1c3_try_but_th4ts_n0t_h0w_th1s_w0rks}
 ```
 
 in sophie's .bash_history you'll find
-```
 curl http://127.0.0.1:9000/internal/telemetry
+that gives us 
 ```
-that gives us FLAG{b4sh_h1st0ry_1s_4_d14ry}
-
-```
+FLAG{b4sh_h1st0ry_1s_4_d14ry}
 ```
